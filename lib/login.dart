@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 //packages for scraping
-import 'dart:convert';
+import 'dart:io';
 import 'package:http/http.dart' as http; // Contains a client for making API calls
 import 'package:html/parser.dart'; // Contains HTML parsers to generate a Document object
 
@@ -25,18 +25,31 @@ class LoginState extends State<Login> {
   }
 
   Future initiate() async {
+    debugPrint(username);
+    debugPrint(pass);
+    debugPrint(actType);
+    debugPrint(url);
+
     var client = http.Client();
     http.Response response = await client.get(url);
 
     var document = parse(response.body);
 
-    var PSTOKEN = document.querySelector("#pstoken");
+    var userInput = document.querySelector("#fieldAccount");
+    var passInput = document.querySelector("#fieldPassword");
+
+    var PSTOKEN = document.querySelector("pstoken");
+//    var PSTOKEN = document.querySelector("#pstoken").appendHtml('<div lc="any-value" >xxx</div>', treeSanitizer: new NullTreeSanitizer());
     var CONTEXTDATA = document.querySelector("#contextData");
+    //FOR CUSTOM ATTRIBUTES
+    //document.querySelector('body').appendHtml('<div lc="any-value" >xxx</div>', treeSanitizer: new NullTreeSanitizer());
 
-    url = "https://ps2.millburn.org";
-    username = "";
-    pass = "";
+    debugPrint(userInput.toString());
+    debugPrint(passInput.toString());
+    debugPrint(PSTOKEN.toString());
+    debugPrint(CONTEXTDATA.toString());
 
+/*
     var b = {
       'pstoken': PSTOKEN,
       'contextData': CONTEXTDATA,
@@ -53,13 +66,14 @@ class LoginState extends State<Login> {
       'pw': pass,
       'translatorpw': ''
     };
-//    http.post(url, body: b);
+    http.post(url, body: b);
+
     http.post(url, body: b)
         .then((response) {
       debugPrint("Response status: ${response.statusCode}");
       debugPrint("Response body: ${response.body}");
     });
-
+*/
   }
 
   @override

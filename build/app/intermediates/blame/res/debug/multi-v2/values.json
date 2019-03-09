@@ -1,10 +1,10 @@
 {
     "logs": [
         {
-            "outputFile": "/home/mehulghosal/code/powerApp/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
+            "outputFile": "/home/mehulghosal/code/powerGPA/build/app/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml",
             "map": [
                 {
-                    "source": "/home/mehulghosal/code/powerApp/android/app/src/main/res/values/styles.xml",
+                    "source": "/home/mehulghosal/code/powerGPA/android/app/src/main/res/values/styles.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

@@ -1,4 +1,4 @@
-#Sun Mar 03 00:18:06 EST 2019
+#Thu Nov 14 12:43:34 EST 2019
 base.0=/home/mehulghosal/code/powerGPA/build/app/intermediates/transforms/dexMerger/debug/0
 path.0=classes.dex
 renamed.0=classes.dex

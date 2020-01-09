@@ -1,6 +1,6 @@
 // This is a generated file; do not edit or check into version control.
 FLUTTER_ROOT=/home/mehulghosal/Documents/flutter
-FLUTTER_APPLICATION_PATH=/home/mehulghosal/code/powerApp/power_app
+FLUTTER_APPLICATION_PATH=/home/mehulghosal/code/powerGPA
 FLUTTER_TARGET=lib/main.dart
 FLUTTER_BUILD_DIR=build
 SYMROOT=${SOURCE_ROOT}/../build/ios
